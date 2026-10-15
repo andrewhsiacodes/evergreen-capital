@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evergreen Capital — Patient capital for early-stage founders</title>
+<meta name="description" content="Evergreen Capital is a micro venture fund empowering early-stage founders we believe will build long-term value. ~$100k first checks, patient capital, portfolio first.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Evergreen Capital">
+<meta property="og:title" content="Evergreen Capital — Patient capital for early-stage founders">
+<meta property="og:description" content="A micro venture fund backing early-stage founders who will build lasting value. ~$100k first checks.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Evergreen Capital — Patient capital for early-stage founders">
+<meta name="twitter:description" content="A micro venture fund backing early-stage founders who will build lasting value. ~$100k first checks.">
+<meta name="theme-color" content="#FAFBF9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%231d1d1f%22/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#FAFBF9; --bg-2:#F1F5F2; --ink:#0E1A14; --ink-2:#2F3E36; --muted:#5B6B62; --faint:#5B6B62;
+  --line:#E1E8E3; --line-strong:#CAD6CE; --soft:#E3EFE8; --card:#fff; --accent:#1F5C43; --ring:rgba(46,139,99,.4); --accent-ink:#fff;
+  --radius:28px; --max:1120px;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,canvas{display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+/* Nav */
+nav.top{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);background:rgba(250,251,249,.72);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.brand canvas{width:22px;height:22px}
+.nav-links{display:flex;gap:28px;font-size:13px;color:var(--ink-2)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-size:13px;font-weight:500;padding:7px 15px;border-radius:999px;background:var(--ink);color:#fff}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:500;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;transition:transform .3s var(--ease),background .3s,box-shadow .3s;font-family:inherit}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:#174733}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-ghost{background:transparent;color:var(--accent);padding-left:6px;padding-right:6px}
+.btn-ghost:hover{text-decoration:underline}
+.btn-light{background:transparent;color:var(--ink);box-shadow:0 0 0 1px var(--line-strong) inset}
+.btn-light:hover{background:var(--soft)}
+a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:12px}
+
+/* Type */
+.eyebrow{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:.02em;margin-bottom:14px}
+h1,h2,h3{letter-spacing:-.035em;line-height:1.04;font-weight:700}
+h1{font-size:clamp(48px,9vw,112px)}
+h2{font-size:clamp(38px,6vw,72px)}
+h3{font-size:22px;letter-spacing:-.02em;line-height:1.2;font-weight:600}
+.lede{font-size:clamp(19px,2.2vw,24px);color:var(--muted);line-height:1.4;letter-spacing:-.01em;max-width:680px}
+.grad{background:linear-gradient(100deg,#1F5C43,#1F5C43);-webkit-background-clip:text;background-clip:text;color:transparent}
+section{padding:140px 0}
+.center{text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+
+/* Hero */
+.hero{position:relative;padding:80px 0 110px;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:
+  radial-gradient(40% 35% at 50% 40%,rgba(207,229,216,.6),transparent 70%),
+  radial-gradient(30% 30% at 30% 60%,rgba(227,239,232,.55),transparent 70%),
+  radial-gradient(30% 30% at 70% 55%,rgba(207,229,216,.5),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative}
+.chip{display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 16px 0 8px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line),0 6px 20px -10px rgba(0,0,0,.15);font-size:14px;color:var(--ink-2);margin-bottom:28px}
+.chip canvas{width:26px;height:26px}
+.hero h1{max-width:980px;margin:0 auto}
+.hero .lede{margin:26px auto 0}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.orb-stage{position:relative;width:min(520px,82vw);aspect-ratio:1;margin:44px auto 0}
+.orb-stage::before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0%,rgba(255,255,255,.6) 45%,transparent 72%);filter:blur(10px)}
+.orb-stage canvas{position:relative;width:100%;height:100%}
+.orb-caption{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:6px}
+
+/* shimmer (after thinking-orbs) */
+.shimmer{position:relative;display:inline-block;color:var(--ink-2)}
+.shimmer::before{content:attr(data-text);position:absolute;inset:0;background-image:linear-gradient(90deg,transparent 0%,transparent 40%,rgba(255,255,255,.95) 50%,transparent 60%,transparent 100%);background-size:250% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 2.4s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes shimmer{0%{background-position:100% 0}to{background-position:0% 0}}
+
+/* Thesis */
+.thesis{background:var(--bg-2)}
+.thesis-statement{font-size:clamp(30px,4.6vw,56px);font-weight:600;letter-spacing:-.03em;line-height:1.12;max-width:980px;color:#6F8077}
+.thesis-statement em{font-style:normal;color:var(--ink)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:80px}
+.card{background:var(--card);border-radius:var(--radius);padding:36px;box-shadow:0 0 0 1px var(--line)}
+.card p{color:var(--muted);margin-top:10px;font-size:17px}
+.card .num{font-family:var(--mono);font-size:13px;color:var(--faint);margin-bottom:28px;display:block}
+
+/* Check size */
+.check{text-align:center}
+.check .lede{margin:0 auto}
+h2+.lede{margin-top:18px}
+.big-num{font-size:clamp(96px,20vw,240px);font-weight:700;letter-spacing:-.06em;line-height:.95;background:linear-gradient(180deg,#F2F7F4 30%,#5FBF8F 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:18px 0 8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:80px;border-top:1px solid var(--line)}
+.stat{padding:32px 20px;text-align:left;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .k{font-size:13px;color:var(--faint);font-weight:500}
+.stat .v{font-size:32px;font-weight:600;letter-spacing:-.03em;margin-top:6px}
+.stat .d{font-size:14px;color:var(--muted);margin-top:4px}
+
+/* How we work */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:72px}
+.step{background:var(--card);border-radius:var(--radius);padding:30px;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column;min-height:330px;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.step:hover{transform:translateY(-4px);box-shadow:0 0 0 1px var(--line),0 24px 50px -24px rgba(0,0,0,.18)}
+.step .orb-sm{width:96px;height:96px;margin:6px 0 auto -6px}
+.step .when{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:28px}
+.step h3{margin-top:6px}
+.step p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* Portfolio */
+.portfolio{background:var(--bg-2)}
+.port-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.filters{margin-bottom:12px;display:flex;gap:8px;flex-wrap:wrap}
+.filters span{font-size:13px;padding:7px 14px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line);color:var(--ink-2)}
+.filters span.on{background:var(--ink);color:#fff;box-shadow:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.co{background:#fff;border-radius:22px;padding:26px;box-shadow:0 0 0 1px var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.co:hover{transform:translateY(-3px);box-shadow:0 0 0 1px var(--line),0 20px 40px -24px rgba(0,0,0,.2)}
+.logo{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px;letter-spacing:-.02em}
+.co h4{font-size:17px;font-weight:600;margin-top:22px;letter-spacing:-.01em}
+.co p{font-size:14px;color:var(--muted);margin-top:4px;min-height:42px}
+.co .meta{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+.co .meta span{font-size:11px;font-weight:500;padding:4px 9px;border-radius:999px;background:var(--bg-2);color:var(--ink-2)}
+.co.empty{background:transparent;box-shadow:0 0 0 1px var(--line) inset;border:1.5px dashed rgba(0,0,0,.12);box-shadow:none;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.co.empty .logo{background:transparent;border:1.5px dashed rgba(0,0,0,.18);color:var(--faint)}
+
+/* Team */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:72px}
+.person{text-align:left}
+.avatar{aspect-ratio:1;border-radius:var(--radius);background:linear-gradient(160deg,#f2f2f5,#e4e4ea);position:relative;overflow:hidden;display:grid;place-items:center}
+.avatar canvas{width:58%;height:58%}
+.person h3{margin-top:22px}
+.person .role{color:var(--muted);font-size:15px;margin-top:2px}
+.person p{color:var(--ink-2);font-size:15px;margin-top:12px;max-width:340px}
+
+/* CTAs */
+.ctas{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cta{border-radius:36px;padding:64px 56px;min-height:520px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(36px,4.4vw,56px)}
+.cta p{font-size:19px;margin-top:18px;max-width:420px;line-height:1.45}
+.cta ul{list-style:none;margin-top:28px;display:grid;gap:10px;font-size:16px}
+.cta li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5;margin-right:12px;vertical-align:middle}
+.cta .actions{margin-top:auto;padding-top:40px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.cta.founders{background:linear-gradient(160deg,#ffffff 0%,#E3EFE8 100%);box-shadow:0 0 0 1px var(--line)}
+.cta.founders p,.cta.founders ul{color:var(--ink-2)}
+.cta.lps{background:radial-gradient(120% 80% at 80% 0%,#12291F 0%,#0B1F17 55%,#08170F 100%);color:#F2F7F4}
+.cta.lps p,.cta.lps ul{color:#9DB3A6}
+.cta.lps .eyebrow{color:#9DB3A6}
+.cta .corner-orb{position:absolute;right:-40px;top:-40px;width:240px;height:240px;opacity:.9;pointer-events:none}
+
+/* FAQ */
+.faq-list{max-width:820px;margin:64px auto 0;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:26px 4px;font-size:20px;font-weight:600;letter-spacing:-.015em;display:flex;justify-content:space-between;align-items:center;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary .plus{flex:none;width:28px;height:28px;border-radius:50%;background:var(--bg-2);position:relative;transition:transform .4s var(--ease)}
+summary .plus::before,summary .plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.6px;background:var(--ink);transform:translate(-50%,-50%)}
+summary .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] summary .plus{transform:rotate(45deg)}
+details p{padding:0 4px 28px;color:var(--muted);font-size:17px;max-width:700px}
+
+/* Footer */
+footer{background:var(--bg-2);padding:64px 0 40px;font-size:13px;color:var(--muted)}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.foot-top h5{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:12px}
+.foot-top a{display:block;padding:4px 0}
+.foot-top a:hover{color:var(--ink)}
+.foot-top a.brand{display:flex;padding:0;color:var(--ink)}
+.foot-brand p{max-width:320px;margin-top:12px}
+.foot-bottom{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;font-size:12px}
+.disclaimer{font-size:11px;color:var(--faint);margin-top:24px;line-height:1.6;max-width:900px}
+
+/* Dark sections */
+.check{background:#0B1F17;color:#F2F7F4}
+.check .eyebrow,.check .lede,.check .stat .k,.check .stat .d{color:#9DB3A6}
+.check .stats,.check .stat{border-color:#214334}
+.check .stat .v{color:#F2F7F4}
+footer{background:#08170F;color:#9DB3A6}
+.foot-top{border-color:#214334}
+.foot-top h5,.foot-top a.brand{color:#F2F7F4}
+.foot-top a:hover{color:#5FBF8F}
+.foot-bottom{color:#9DB3A6}
+.cta .btn-primary{background:var(--accent)}
+.cta.lps .btn-light{color:#F2F7F4;box-shadow:0 0 0 1px #214334 inset}
+.cta.lps .btn-light:hover{background:#12291F}
+.orb-stage::before{background:radial-gradient(circle at 50% 45%,#fff 0%,rgba(227,239,232,.6) 45%,transparent 72%)}
+.avatar{background:linear-gradient(160deg,#F1F5F2,#E3EFE8)}
+.filters span.on{background:var(--accent)}
+.chip,.co,.card,.step{border-color:var(--line)}
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.shimmer::before{animation:none}html{scroll-behavior:auto}}
+
+/* Responsive */
+@media (max-width:980px){
+  .steps,.grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .ctas{grid-template-columns:1fr}
+  .cta{min-height:0}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media (max-width:720px){
+  .nav-links{display:none}
+  section{padding:96px 0}
+  .wrap{padding:0 22px}
+  .pillars,.team-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr;gap:12px}
+  .co{padding:20px}
+  .co p{min-height:0}
+  .steps{grid-template-columns:1fr}
+  .step{min-height:0}
+  .step .orb-sm{width:72px;height:72px;margin-bottom:8px}
+  .cta{padding:44px 28px;border-radius:28px}
+  .cta .corner-orb{width:170px;height:170px;right:-50px;top:-50px}
+  .hero{padding:64px 0 80px}
+  .orb-stage{margin-top:40px}
+  .team-grid{gap:44px}
+  .person .avatar{max-width:none}
+  summary{font-size:18px}
+  .step{display:grid;grid-template-columns:72px 1fr;column-gap:18px;padding:24px;align-items:start}
+  .step .orb-sm{grid-row:1/4;margin:0}
+  .step .when{margin-top:0}
+  .avatar{aspect-ratio:16/10}
+  .avatar canvas{width:44%;height:auto;aspect-ratio:1}
+  .stat .v{font-size:24px}
+  .stat{padding:24px 14px}
+}
+@media (max-width:340px){
+  .grid{grid-template-columns:1fr}
+}
+@media (max-width:420px){
+  .stat .v{font-size:21px}
+  .hero-ctas .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body id="top">
+
+<nav class="top" aria-label="Primary">
+  <div class="wrap">
+    <a href="#top" class="brand"><canvas data-orb="globe" data-size="22" aria-hidden="true"></canvas>Evergreen Capital</a>
+    <div class="nav-links">
+      <a href="#thesis">Thesis</a><a href="#how">How we work</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#faq">FAQ</a>
+    </div>
+    <a href="#founders" class="nav-cta">Pitch us</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="chip reveal"><canvas data-orb="orbits" data-size="26" aria-hidden="true"></canvas><span class="shimmer" data-text="Now meeting early-stage founders">Now meeting early-stage founders</span></div>
+    <h1 class="reveal d1">Patient capital.<br><span class="grad">Evergreen</span> conviction.</h1>
+    <p class="lede reveal d2">Evergreen Capital empowers early-stage founders we believe will bring long-term value. We write ~$100k first checks and build our portfolio one founder at a time, with patience.</p>
+    <div class="hero-ctas reveal d3">
+      <a href="#founders" class="btn btn-primary">For founders</a>
+      <a href="#lps" class="btn btn-light">For investors</a>
+    </div>
+    <div class="orb-stage reveal d3">
+      <canvas id="hero-orb" data-orb="hero" data-size="520" data-hero="1" role="img" aria-label="Animated dotted orb that grows into an evergreen tree"></canvas>
+    </div>
+    <div class="orb-caption reveal">growing, one founder at a time</div>
+  </div>
+</header>
+
+<section id="thesis" class="thesis">
+  <div class="wrap">
+    <div class="eyebrow reveal">Thesis</div>
+    <p class="thesis-statement reveal d1">Lasting companies start as small seeds. <em>We back them early and stay patient:</em> modest checks, written with conviction, to <em>build a portfolio before we build a brand.</em></p>
+    <div class="pillars">
+      <div class="card reveal"><span class="num">01</span><h3>Think long-term</h3><p>A focused first fund and ~$100k first checks, made with care. We earn the right to scale.</p></div>
+      <div class="card reveal d1"><span class="num">02</span><h3>Back founders early</h3><p>We empower early-stage founders we believe will bring long-term value, and back the person before the pitch deck.</p></div>
+      <div class="card reveal d2"><span class="num">03</span><h3>Portfolio first</h3><p>We build the portfolio first. ~$100k checks across many founders give long-term outliers room to grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="check" class="check">
+  <div class="wrap">
+    <div class="eyebrow reveal">Check size &amp; stage</div>
+    <h2 class="reveal d1">One number to remember.</h2>
+    <div class="big-num reveal d2">$100k</div>
+    <p class="lede reveal d3">Our first check into an early-stage founder. Small enough to move quickly, patient enough to stay for the long run.</p>
+    <div class="stats reveal">
+      <div class="stat"><div class="k">Typical check</div><div class="v">~$100k</div><div class="d">First checks, written early</div></div>
+      <div class="stat"><div class="k">Stage</div><div class="v">Early-stage</div><div class="d">[Stage details TBC]</div></div>
+      <div class="stat"><div class="k">Target portfolio</div><div class="v">[N]</div><div class="d">Target companies in the portfolio [TBC]</div></div>
+      <div class="stat"><div class="k">Decision time</div><div class="v">[X weeks]</div><div class="d">From first call to decision [TBC]</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how" style="padding-top:40px">
+  <div class="wrap center">
+    <div class="eyebrow reveal">How we work</div>
+    <h2 class="reveal d1">Simple by design.</h2>
+    <p class="lede reveal d2">A short, founder-friendly process built on trust and a long-term view.</p>
+  </div>
+  <div class="wrap">
+    <div class="steps">
+      <div class="step reveal"><canvas class="orb-sm" data-orb="wave" data-size="96" aria-hidden="true"></canvas><div class="when">Step 01</div><h3>Listen</h3><p>A first conversation. Tell us what you're building and why it will last.</p></div>
+      <div class="step reveal d1"><canvas class="orb-sm" data-orb="globe" data-size="96" aria-hidden="true"></canvas><div class="when">Step 02</div><h3>Dig in</h3><p>A deeper session on the product, the market, and your long-term vision.</p></div>
+      <div class="step reveal d2"><canvas class="orb-sm" data-orb="rubik" data-size="96" aria-hidden="true"></canvas><div class="when">Step 03</div><h3>Decide</h3><p>A clear yes or no, with honest reasons either way.</p></div>
+      <div class="step reveal d3"><canvas class="orb-sm" data-orb="ribbon" data-size="96" aria-hidden="true"></canvas><div class="when">Ongoing</div><h3>Show up</h3><p>A patient partner and sounding board when you need one, and out of the way when you don't.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <div class="wrap">
+    <div class="port-head">
+      <div>
+        <div class="eyebrow reveal">Portfolio</div>
+        <h2 class="reveal d1">Planted early. Grown patiently.</h2>
+      </div>
+      <div class="filters reveal d2"><span class="on">All</span><span>[Sector]</span><span>[Sector]</span><span>[Sector]</span></div>
+    </div>
+    <div class="grid">
+      <div class="co reveal"><div class="logo" style="background:linear-gradient(135deg,#2E7D5B,#1F5C43)">1</div><h4>[Portfolio Company 1]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal d1"><div class="logo" style="background:linear-gradient(135deg,#7FB89A,#2E7D5B)">2</div><h4>[Portfolio Company 2]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal d2"><div class="logo" style="background:linear-gradient(135deg,#1F5C43,#174733)">3</div><h4>[Portfolio Company 3]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal d3"><div class="logo" style="background:linear-gradient(135deg,#2E7D5B,#1F5C43)">4</div><h4>[Portfolio Company 4]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal"><div class="logo" style="background:linear-gradient(135deg,#7FB89A,#2E7D5B)">5</div><h4>[Portfolio Company 5]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal d1"><div class="logo" style="background:linear-gradient(135deg,#1F5C43,#174733)">6</div><h4>[Portfolio Company 6]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co reveal d2"><div class="logo" style="background:linear-gradient(135deg,#2E7D5B,#1F5C43)">7</div><h4>[Portfolio Company 7]</h4><p>[One-line description]</p><div class="meta"><span>[Sector]</span><span>[Stage]</span></div></div>
+      <div class="co empty reveal d3"><div class="logo">+</div><h4>Your company</h4><p>We're looking for the next founder.</p><div class="meta"><a href="#founders" class="btn-ghost" style="font-size:14px;color:var(--accent)">Pitch us →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="eyebrow reveal">Team</div>
+    <h2 class="reveal d1">Small team. Long view.</h2>
+    <p class="lede reveal d2" style="margin-top:20px">[Team introduction, to be written]</p>
+    <div class="team-grid">
+      <div class="person reveal"><div class="avatar"><canvas data-orb="globe" data-size="200" aria-hidden="true"></canvas></div><h3>[Team Member Name]</h3><div class="role">[Title]</div><p>[Bio to be added]</p></div>
+      <div class="person reveal d1"><div class="avatar"><canvas data-orb="wave" data-size="200" aria-hidden="true"></canvas></div><h3>[Team Member Name]</h3><div class="role">[Title]</div><p>[Bio to be added]</p></div>
+      <div class="person reveal d2"><div class="avatar"><canvas data-orb="rubik" data-size="200" aria-hidden="true"></canvas></div><h3>[Team Member Name]</h3><div class="role">[Title]</div><p>[Bio to be added]</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ctas" style="padding-top:0">
+  <div class="wrap ctas">
+    <div id="founders" class="cta founders reveal">
+      <canvas class="corner-orb" data-orb="globe" data-size="240" aria-hidden="true"></canvas>
+      <div class="eyebrow">For founders</div>
+      <h2>Building something early?</h2>
+      <p>We empower early-stage founders we believe will bring long-term value. Send us a few lines and a link.</p>
+      <ul><li>~$100k first checks</li><li>Patient, long-term partnership</li><li>Help when asked, quiet when not</li></ul>
+      <div class="actions"><a href="mailto:founders@evergreen-capital.example?subject=Pitch%20to%20Evergreen%20Capital" class="btn btn-primary">Pitch Evergreen Capital</a><a href="#faq" class="btn btn-ghost">Read the FAQ</a></div>
+    </div>
+    <div id="lps" class="cta lps reveal d1">
+      <canvas class="corner-orb" data-orb="ribbon" data-size="240" data-dark="1" aria-hidden="true"></canvas>
+      <div class="eyebrow">For investors &amp; LPs</div>
+      <h2>Invest with us.</h2>
+      <p>A micro fund for investors who share a long-term view and want early exposure to founders building lasting companies.</p>
+      <ul><li>Target fund size: [$X]M [TBC]</li><li>[N] early-stage companies [TBC]</li><li>[Investor update cadence TBC]</li></ul>
+      <div class="actions"><a href="mailto:investors@evergreen-capital.example?subject=Evergreen%20Capital%20deck%20request" class="btn btn-light">Request the deck</a><a href="mailto:investors@evergreen-capital.example?subject=Talk%20to%20Evergreen%20Capital" class="btn btn-ghost" style="color:#5FBF8F">Get in touch</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:40px">
+  <div class="wrap center">
+    <div class="eyebrow reveal">FAQ</div>
+    <h2 class="reveal d1">Questions, answered.</h2>
+  </div>
+  <div class="wrap">
+    <div class="faq-list reveal">
+      <details open><summary>How much do you invest?<span class="plus"></span></summary><p>Our typical first check is around $100k. [Range and follow-on details TBC]</p></details>
+      <details><summary>What stage do you invest in?<span class="plus"></span></summary><p>Early-stage founders we believe will bring long-term value. [Specific stage criteria TBC]</p></details>
+      <details><summary>Do you lead rounds?<span class="plus"></span></summary><p>[Lead / co-invest policy TBC]</p></details>
+      <details><summary>Do I need a warm intro?<span class="plus"></span></summary><p>[Intro policy TBC] Use the pitch button above: a short note, a link, and why you're the person to build it.</p></details>
+      <details><summary>Do you reserve for follow-ons?<span class="plus"></span></summary><p>We build the portfolio first. [Follow-on reserve policy TBC]</p></details>
+      <details><summary>How can I invest in the fund?<span class="plus"></span></summary><p>[Eligibility and terms TBC] Request the deck and we'll follow up with details.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><a href="#top" class="brand"><canvas data-orb="globe" data-size="22"  data-dark="1" aria-hidden="true"></canvas>Evergreen Capital</a><p>Patient capital for early-stage founders we believe will bring long-term value.</p></div>
+      <div><h5>Fund</h5><a href="#thesis">Thesis</a><a href="#check">Check size</a><a href="#portfolio">Portfolio</a></div>
+      <div><h5>Founders</h5><a href="#founders">Pitch us</a><a href="#how">How we work</a><a href="#faq">FAQ</a></div>
+      <div><h5>Investors</h5><a href="#lps">Invest</a><a href="mailto:investors@evergreen-capital.example?subject=Evergreen%20Capital%20deck%20request">Request deck</a><a href="mailto:investors@evergreen-capital.example">Contact</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Evergreen Capital. All rights reserved.</span><span>Orb animation adapted from Thinking Orbs by Rareform Labs (MIT).</span></div>
+  </div>
+</footer>
+
+<script>
+/* Thinking orbs: vanilla port of the canvas renderers from
+   https://rareformlabs.github.io/thinking-orbs/ (Rareform Labs, MIT License). */
+(function(){
+  const hash=(a,b)=>{const n=Math.sin(a*12.9898+b*78.233)*43758.5453;return n-Math.floor(n)};
+  const fib=(i,n)=>{const g=Math.PI*(3-Math.sqrt(5)),y=1-2*(i+.5)/n,r=Math.sqrt(1-y*y),t=i*g;return[r*Math.cos(t),y,r*Math.sin(t)]};
+  const angDiff=(a,b)=>Math.atan2(Math.sin(a-b),Math.cos(a-b));
+  const proj=(yaw,tilt,cx,cy,s)=>{const st=Math.sin(tilt),ct=Math.cos(tilt),sy=Math.sin(yaw),cyw=Math.cos(yaw);
+    return(x,y,z)=>{const X=x*cyw+z*sy,Z1=-x*sy+z*cyw,Y=y*ct-Z1*st,Z=y*st+Z1*ct;return[cx+X*s,cy-Y*s,Z]}};
+  let INK=[29,29,31];
+  const hx=h=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+  const ramp=(stops,t)=>{t=Math.min(1,Math.max(0,t))*(stops.length-1);const i=Math.min(stops.length-2,Math.floor(t)),f=t-i,a=stops[i],b=stops[i+1];return a.map((v,k)=>Math.round(v+(b[k]-v)*f))};
+  // light: near #2E7D5B -> mid #7FB89A -> far #CFE5D8 ; dark: near #D6F5E3 -> #8FD1AE -> far #3E8F68
+  const LIGHT=['#2E7D5B','#7FB89A','#CFE5D8'].map(hx),DARK=['#D6F5E3','#8FD1AE','#3E8F68'].map(hx);
+  function draw(ctx,pts,dark,rMin){
+    pts.sort((a,b)=>a.z-b.z);
+    for(const p of pts){const a=p.a??1;if(a<.02)continue;const w=Math.min(1,Math.max(0,p.white));
+      const c=ramp(dark?DARK:LIGHT,dark?w:Math.min(1,w/1.15));ctx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},${a})`;
+      ctx.beginPath();ctx.arc(p.x,p.y,Math.max(rMin??.3,p.r),0,Math.PI*2);ctx.fill();}
+  }
+  const rs=(size,p)=>(size/300)**p;
+  function rubikState(t,n,dur,pause){const tot=2*n*dur+pause,m=t%tot,amt=new Array(n).fill(0);let act=-1;
+    if(m<2*n*dur){const k=Math.floor(m/dur),f=(m-k*dur)/dur,e=1-(1-Math.min(1,f/.7))**3;
+      if(k<n){for(let i=0;i<k;i++)amt[i]=1;amt[k]=e;act=k}else{const b=2*n-1-k;for(let i=0;i<b;i++)amt[i]=1;amt[b]=1-e;act=b}}
+    return{amount:amt,active:act}}
+  function rubikApply(v,moves,st){let[x,y,z]=v,hit=false;
+    for(let i=0;i<moves.length;i++){if(st.amount[i]<=0)continue;const m=moves[i],c=m.axis===0?x:m.axis===1?y:z;if(c<m.lo||c>=m.hi)continue;
+      if(i===st.active)hit=true;const a=m.ang*st.amount[i],ca=Math.cos(a),sa=Math.sin(a);
+      if(m.axis===0){const ny=y*ca-z*sa;z=y*sa+z*ca;y=ny}else if(m.axis===1){const nx=x*ca+z*sa;z=-x*sa+z*ca;x=nx}else{const nx=x*ca-y*sa;y=x*sa+y*ca;x=nx}}
+    return[x,y,z,hit]}
+  function rubikMoves(n){const o=[];for(let i=0;i<n;i++){const ax=Math.min(2,Math.floor(hash(i,2.3)*3)),lo=-1+.5*Math.min(3,Math.floor(hash(i,5.9)*4));o.push({axis:ax,lo,hi:lo+.5,ang:(hash(i,7.7)<.5?1:-1)*Math.PI/2})}return o}
+
+  const R={
+    globe(ctx,S,t,dark,o){const c=S/2,rad=S/2*.82,tilt=.4+.06*Math.sin(t*.35),P=proj(t*.5,tilt,c,c,rad),scan=t*(.5+1.2*(o.scanMul??1)),k=rs(S,.6),dim=o.dimBase??1,pts=[],L=o.latRings??17,D=o.lonDensity??44;
+      for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),n=Math.max(1,Math.round(Math.abs(cl)*D));
+        for(let j=0;j<n;j++){const lon=j/n*2*Math.PI,[x,y,z]=P(cl*Math.cos(lon),sl,cl*Math.sin(lon)),d=(z+1)/2,da=angDiff(lon+t*.5,scan),g=Math.exp(-(da*da)/.18)*Math.max(0,z);
+          pts.push({x,y,z,r:((o.rBase??.6)+(o.rDepth??1.7)*d+(o.rBoost??1)*g)*k,white:(o.inkFar??.62)-(o.inkSpan??.54)*d,a:dim+(1-dim)*Math.min(1,g)})}}
+      draw(ctx,pts,dark,o.rMin)},
+
+    hero(ctx,S,t,dark,o){
+      const st=o.state||(o.state={prog:reduce?1:0,last:null,pts:null,hold:reduce?0:.8});
+      if(!st.pts){const raw=[],L=o.latRings??17,D=o.lonDensity??44;
+        for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),n=Math.max(1,Math.round(Math.abs(cl)*D));
+          for(let j=0;j<n;j++){const lon=j/n*2*Math.PI;raw.push({lon,s:[cl*Math.cos(lon),sl,cl*Math.sin(lon)]})}}
+        raw.sort((a,b)=>a.s[1]-b.s[1]||a.lon-b.lon);
+        const N=raw.length,tiers=5,R=[.80,.67,.54,.41,.28],yb=[-.70,-.36,-.02,.32,.64],yt=[-.18,.16,.50,.82,1.0];
+        const wt=[.17,.15,.13,.11,.08],trunkW=.07,tot=trunkW+wt.reduce((a,b)=>a+b,0)*1;
+        const bounds=[0,trunkW/tot];let acc=trunkW;for(const w of wt){acc+=w;bounds.push(acc/tot)}
+        raw.forEach((p,i)=>{const q=(i+.5)/N;let k=0;while(k<tiers&&q>bounds[k+1])k++;
+          const f=(q-bounds[k])/(bounds[k+1]-bounds[k]);let X,Y,Z;const c=Math.cos(p.lon),sn=Math.sin(p.lon);
+          if(k===0){const r=.07;Y=-1+f*.32;X=c*r;Z=sn*r}
+          else{const T=k-1,idx=i,scal=1+.1*Math.sin(5*p.lon+T*1.7);
+            if(idx%4===0){const r=R[T]*Math.sqrt(((idx*0.61803)%1))*scal;Y=yb[T]-.02;X=c*r;Z=sn*r}
+            else{const u=Math.sqrt(1-f),r=R[T]*u*scal;Y=yt[T]-(yt[T]-yb[T])*u-(u>.9?.03:0);X=c*r;Z=sn*r}}
+          p.t=[X,Y,Z];p.d=(p.s[1]+1)/2});
+        st.pts=raw}
+      if(!reduce){if(st.last!=null){const dt=Math.min(.1,Math.max(0,t-st.last));if(st.hold>0)st.hold-=dt;else st.prog=Math.min(1,st.prog+dt/7)}st.last=t}
+      const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,g0=Math.min(1,st.prog);
+      const c=S/2,rad=S/2*.82,ts=ease(g0),tilt=(.4+.06*Math.sin(t*.35))*(1-ts)+.16*ts,P=proj(t*.5,tilt,c,c,rad*(1-.04*ts)),scan=t*(.5+1.2*(o.scanMul??1)),k=rs(S,.6),dim=o.dimBase??1,pts=[];
+      for(const p of st.pts){const e=ease(Math.min(1,Math.max(0,(g0*1.4-.4*p.d)))),b=Math.sin(Math.PI*e)*.12,
+          x=p.s[0]+(p.t[0]-p.s[0])*e,y=p.s[1]+(p.t[1]-p.s[1])*e,z=p.s[2]+(p.t[2]-p.s[2])*e,hr=Math.hypot(x,z)||1,
+          [px,py,pz]=P(x+x/hr*b,y,z+z/hr*b),d=(pz+1)/2,da=angDiff(p.lon+t*.5,scan),g=Math.exp(-(da*da)/.18)*Math.max(0,pz);
+        pts.push({x:px,y:py,z:pz,r:((o.rBase??.6)+(o.rDepth??1.7)*d+(o.rBoost??1)*g)*k*(1+.15*ts),white:(o.inkFar??.62)-(o.inkSpan??.54)*d,a:dim+(1-dim)*Math.min(1,g)})}
+      draw(ctx,pts,dark,o.rMin)},
+    rubik(ctx,S,t,dark,o){const c=S/2,rad=S/2*.82,P=proj(t*.55,.35+.1*Math.sin(t*.9),c,c,rad),k=rs(S,.6),n=o.moveCount??14,mv=rubikMoves(n),st=rubikState(t,n,.42,1.2),pts=[],L=o.latRings??15,D=o.lonDensity??40;
+      for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),m=Math.max(1,Math.round(Math.abs(cl)*D));
+        for(let j=0;j<m;j++){const lon=j/m*2*Math.PI,[a,b,cc,hit]=rubikApply([cl*Math.cos(lon),sl,cl*Math.sin(lon)],mv,st),[x,y,z]=P(a,b,cc),d=(z+1)/2;
+          pts.push({x,y,z,r:((o.rBase??.6)+(o.rDepth??1.7)*d+(hit?o.rActive??.3:0))*k,white:(o.inkFar??.62)-(o.inkSpan??.54)*d-(hit?.14:0)})}}
+      draw(ctx,pts,dark,o.rMin)},
+    wave(ctx,S,t,dark,o){const c=S/2,rad=S/2*.874,P=proj(t*.18,.38,c,c,1),k=rs(S,.6),pts=[],L=o.rings??15,D=o.lonDensity??40;
+      for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),w=.62*Math.sin(t*2.1-i*.52)+.38*Math.sin(t*1.27+i*.83),rr=rad*(.88+.105*w),n=Math.max(1,Math.round(Math.abs(cl)*D));
+        for(let j=0;j<n;j++){const lon=j/n*2*Math.PI,[x,y,z]=P(cl*Math.cos(lon)*rr,sl*rr,cl*Math.sin(lon)*rr),d=(z/rad+1)/2,p=Math.max(0,w);
+          pts.push({x,y,z,r:((o.rBase??.6)+(o.rDepth??1.7)*d)*(1+.4*p)*k,white:.66-.56*d-.1*p})}}
+      draw(ctx,pts,dark,o.rMin)},
+    orbits(ctx,S,t,dark,o){const c=S/2,rad=S/2*.82,P=proj(t*.12,.3,c,c,1),k=rs(S,.6),pts=[],N=o.orbitN??12,G=o.ghostN??40,Q=o.particles??3;
+      for(let i=0;i<N;i++){const h1=hash(i,1.7),h2=hash(i,5.2),h3=hash(i,8.9),T=rad*(.45+.52*h1),ph=h1*2*Math.PI,th=Math.acos(2*h2-1),nx=Math.sin(th)*Math.cos(ph),ny=Math.cos(th),nz=Math.sin(th)*Math.sin(ph);
+        let ux=-ny,uy=nx;const uz=0,len=Math.max(1e-6,Math.hypot(ux,uy));ux/=len;uy/=len;
+        const vx=ny*uz-nz*uy,vy=nz*ux-nx*uz,vz=nx*uy-ny*ux,sp=(.25+.55*h3)*(h3>.5?1:-1);
+        const at=a=>P((ux*Math.cos(a)+vx*Math.sin(a))*T,(uy*Math.cos(a)+vy*Math.sin(a))*T,(uz*Math.cos(a)+vz*Math.sin(a))*T);
+        for(let g=0;g<G;g++){const[x,y,z]=at(g/G*2*Math.PI),d=(z/T+1)/2;pts.push({x,y,z,r:(o.ghostR??.9)*k,white:.72,a:(o.ghostA??.5)*(.4+.6*d)})}
+        for(let q=0;q<Q;q++){const[x,y,z]=at(t*sp+q/Q*2*Math.PI+h2*6),d=(z/T+1)/2;pts.push({x,y,z,r:((o.partR??1.2)+(o.partRDepth??1.6)*d)*k,white:.3-.22*d})}}
+      draw(ctx,pts,dark,o.rMin)},
+    ribbon(ctx,S,t,dark,o){const c=S/2,rad=S/2*.78,spin=o.spin??1,P=proj(t*.1*spin,.3,c,c,1),k=rs(S,.6),pts=[],G=o.ghostN??150;
+      for(let i=0;i<G;i++){const f=fib(i,G),[x,y,z]=P(f[0]*rad,f[1]*rad,f[2]*rad),d=(z/rad+1)/2;pts.push({x,y,z,r:.8*k,white:.78,a:.1+.22*d})}
+      const yaw=t*.24*spin,tl=.55+.3*Math.sin(t*.18)*spin,ax=Math.cos(yaw),ay=0,az=Math.sin(yaw),bx=-az*Math.sin(tl),by=Math.cos(tl),bz=ax*Math.sin(tl),
+        nx=ay*bz-az*by,ny=az*bx-ax*bz,nz=ax*by-ay*bx,lanes=Math.max(1,Math.round((o.lanes??5)*(o.bandMul??1))),segs=o.segs??88;
+      for(let l=0;l<lanes;l++){const off=(l-(lanes-1)/2)*.075,edge=Math.abs(l-(lanes-1)/2)/Math.max(1,(lanes-1)/2);
+        for(let s=0;s<segs;s++){const a=s/segs*2*Math.PI,wb=(.16*Math.sin(a*3-t*1.7+l*.22)+.07*Math.sin(a*5+t*1.1))*(o.wobMul??1),e=off+wb,
+          X=ax*Math.cos(a)+bx*Math.sin(a)+nx*e,Y=ay*Math.cos(a)+by*Math.sin(a)+ny*e,Z=az*Math.cos(a)+bz*Math.sin(a)+nz*e,m=Math.hypot(X,Y,Z),[x,y,z]=P(X/m*rad,Y/m*rad,Z/m*rad),d=(z/rad+1)/2;
+          pts.push({x,y,z,r:((o.rBase??1.1)+(o.rDepth??1.7)*d)*(1-.25*edge)*k,white:.52-.44*d+.18*edge,a:.4+.6*d})}}
+      draw(ctx,pts,dark,o.rMin)}
+  };
+  // Presets: tuned per size, mirroring the upstream 64px/20px "count/size/speed" scaling idea.
+  function preset(mode,S){
+    const big=S>=160, tiny=S<=32;
+    const base={hero:{latRings:17,lonDensity:44,rBase:.6,rDepth:1.7,rBoost:1,inkFar:.62,inkSpan:.54,rMin:.3,scanMul:2.2,dimBase:.55},globe:{latRings:17,lonDensity:44,rBase:.6,rDepth:1.7,rBoost:1,inkFar:.62,inkSpan:.54,rMin:.3,scanMul:2.2,dimBase:.55},
+      rubik:{latRings:15,lonDensity:40,moveCount:14,rBase:.6,rDepth:1.7,rActive:.3,inkFar:.62,inkSpan:.54,rMin:.3},
+      wave:{rings:15,lonDensity:40,rBase:.6,rDepth:1.7,rMin:.3},
+      orbits:{orbitN:12,ghostN:40,ghostR:.9,ghostA:.5,particles:3,partR:1.2,partRDepth:1.6,rMin:.3},
+      ribbon:{lanes:5,segs:88,ghostN:150,rBase:1.1,rDepth:1.7,rMin:.3,spin:0,bandMul:3.9,wobMul:1}}[mode];
+    const o={...base};
+    if(big){ if(mode==='globe'||mode==='hero'){o.latRings=26;o.lonDensity=72;o.rBase=.5;o.rDepth=1.4;o.rBoost=1.1} if(mode==='ribbon'){o.segs=140;o.ghostN=260} }
+    else { // small: fewer, larger dots (upstream "count" + "size" multipliers)
+      const cnt=tiny?.12:.38, sz=tiny?2.1:1.15, r=Math.sqrt(cnt);
+      for(const[a,b]of[["latRings","lonDensity"],["rings","lonDensity"],["lanes","segs"]]) if(o[a]!=null&&o[b]!=null){o[a]=Math.max(2,Math.round(o[a]*r));o[b]=Math.max(2,Math.round(o[b]*r))}
+      if(o.orbitN!=null){o.ghostN=Math.max(4,Math.round(o.ghostN*(tiny?.3:.8)))}
+      if(mode==='ribbon'&&!tiny){o.ghostN=60;o.bandMul=2.6}
+      for(const kk of["rBase","rDepth","rActive","ghostR","partR","partRDepth"]) if(o[kk]!=null)o[kk]*=sz;
+    }
+    const speed={hero:.9,globe:.9,rubik:1.4,wave:2.2,orbits:1.5,ribbon:1.6}[mode];
+    return{o,speed};
+  }
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const orbs=[];
+  document.querySelectorAll('canvas[data-orb]').forEach(cv=>{
+    const mode=cv.dataset.orb,S=+cv.dataset.size||64,dpr=Math.min(2,devicePixelRatio||1);
+    cv.width=Math.round(S*dpr);cv.height=Math.round(S*dpr);
+    const ctx=cv.getContext('2d'),{o,speed}=preset(mode,S),dark=cv.dataset.dark==='1',off=Math.random()*20;
+    const orb={cv,visible:true,render(now){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,S,S);R[mode](ctx,S,off+now*speed,dark,o)}};
+    orb.render(.6);orbs.push(orb);
+  });
+  if(!reduce){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{const o=orbs.find(x=>x.cv===e.target);if(o)o.visible=e.isIntersecting}));
+    orbs.forEach(o=>io.observe(o.cv));
+    const loop=()=>{const t=performance.now()/1000;if(document.visibilityState!=='hidden')orbs.forEach(o=>o.visible&&o.render(t));requestAnimationFrame(loop)};
+    requestAnimationFrame(loop);
+  }
+  // Scroll reveals
+  const rv=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver'in window)){rv.forEach(e=>e.classList.add('in'))}
+  else{const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.08});rv.forEach(e=>io2.observe(e))}
+})();
+</script>
+</body>
+</html>
