@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Evergreen Capital — We back founders building things that last</title>
-<meta name="description" content="We back early-stage founders building things that last. Evergreen Capital partners with pre-seed and seed founders building sustainable companies that disrupt industries.">
+<title>Evergreen Capital — Backing Founders that Disrupt</title>
+<meta name="description" content="Backing Founders that Disrupt. Evergreen Capital partners with pre-seed and seed founders building sustainable companies that disrupt industries.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Evergreen Capital">
-<meta property="og:title" content="Evergreen Capital — We back founders building things that last">
-<meta property="og:description" content="We back early-stage founders building things that last.">
+<meta property="og:title" content="Evergreen Capital — Backing Founders that Disrupt">
+<meta property="og:description" content="Backing Founders that Disrupt.">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Evergreen Capital — Patient capital for early-stage founders">
-<meta name="twitter:description" content="We back early-stage founders building things that last.">
+<meta name="twitter:description" content="Backing Founders that Disrupt.">
 <meta name="theme-color" content="#FAFBF9">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22%231d1d1f%22/%3E%3C/svg%3E">
 <style>
@@ -245,7 +245,7 @@ footer{background:#08170F;color:#9DB3A6}
 
 <nav class="top" aria-label="Primary">
   <div class="wrap">
-    <a href="#top" class="brand"><canvas data-orb="globe" data-size="22" aria-hidden="true"></canvas>Evergreen Capital</a>
+    <a href="#top" class="brand"><canvas data-orb="tree" data-size="22" aria-hidden="true"></canvas>Evergreen Capital</a>
     <div class="nav-links">
       <a href="#thesis">Thesis</a><a href="#how">How it works</a><a href="#offer">What we offer</a><a href="#portfolio">Portfolio</a><a href="#team">Team</a><a href="#faq">FAQ</a>
     </div>
@@ -256,7 +256,7 @@ footer{background:#08170F;color:#9DB3A6}
 <header class="hero">
   <div class="wrap">
     <div class="chip reveal"><canvas data-orb="orbits" data-size="26" aria-hidden="true"></canvas><span class="shimmer" data-text="Now meeting early-stage founders">Now meeting early-stage founders</span></div>
-    <h1 class="reveal d1">We back early-stage founders building things that <span class="grad">last.</span></h1>
+    <h1 class="reveal d1">Backing Founders that <span class="grad">Disrupt.</span></h1>
     <p class="lede reveal d2">Evergreen Capital partners with [pre-seed and seed] founders building sustainable companies that disrupt industries and create long-term value.</p>
     <div class="hero-ctas reveal d3">
       <a href="#founders" class="btn btn-primary">Pitch us</a>
@@ -385,7 +385,7 @@ footer{background:#08170F;color:#9DB3A6}
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-brand"><a href="#top" class="brand"><canvas data-orb="globe" data-size="22"  data-dark="1" aria-hidden="true"></canvas>Evergreen Capital</a><p>We back early-stage founders building things that last.</p><p class="community">[Join a community of founders and operators who share what they've learned, if we have one.]</p></div>
+      <div class="foot-brand"><a href="#top" class="brand"><canvas data-orb="tree" data-size="22" data-dark="1" aria-hidden="true"></canvas>Evergreen Capital</a><p>Backing Founders that Disrupt.</p><p class="community">[Join a community of founders and operators who share what they've learned, if we have one.]</p></div>
       <div><h5>Fund</h5><a href="#thesis">Thesis</a><a href="#offer">What we offer</a><a href="#portfolio">Portfolio</a></div>
       <div><h5>Founders</h5><a href="#founders">Pitch us</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
       <div><h5>Investors</h5><a href="#lps">Invest</a><a href="mailto:investors@evergreen-capital.example?subject=Evergreen%20Capital%20deck%20request">Request deck</a><a href="mailto:investors@evergreen-capital.example">Contact</a></div>
@@ -426,6 +426,18 @@ footer{background:#08170F;color:#9DB3A6}
     return[x,y,z,hit]}
   function rubikMoves(n){const o=[];for(let i=0;i<n;i++){const ax=Math.min(2,Math.floor(hash(i,2.3)*3)),lo=-1+.5*Math.min(3,Math.floor(hash(i,5.9)*4));o.push({axis:ax,lo,hi:lo+.5,ang:(hash(i,7.7)<.5?1:-1)*Math.PI/2})}return o}
 
+  function treeTargets(raw){
+        const N=raw.length,tiers=5,R=[.80,.67,.54,.41,.28],yb=[-.70,-.36,-.02,.32,.64],yt=[-.18,.16,.50,.82,1.0];
+        const wt=[.17,.15,.13,.11,.08],trunkW=.07,tot=trunkW+wt.reduce((a,b)=>a+b,0)*1;
+        const bounds=[0,trunkW/tot];let acc=trunkW;for(const w of wt){acc+=w;bounds.push(acc/tot)}
+        raw.forEach((p,i)=>{const q=(i+.5)/N;let k=0;while(k<tiers&&q>bounds[k+1])k++;
+          const f=(q-bounds[k])/(bounds[k+1]-bounds[k]);let X,Y,Z;const c=Math.cos(p.lon),sn=Math.sin(p.lon);
+          if(k===0){const r=.07;Y=-1+f*.32;X=c*r;Z=sn*r}
+          else{const T=k-1,idx=i,scal=1+.1*Math.sin(5*p.lon+T*1.7);
+            if(idx%4===0){const r=R[T]*Math.sqrt(((idx*0.61803)%1))*scal;Y=yb[T]-.02;X=c*r;Z=sn*r}
+            else{const u=Math.sqrt(1-f),r=R[T]*u*scal;Y=yt[T]-(yt[T]-yb[T])*u-(u>.9?.03:0);X=c*r;Z=sn*r}}
+          p.t=[X,Y,Z];p.d=(p.s[1]+1)/2});
+  }
   const R={
     globe(ctx,S,t,dark,o){const c=S/2,rad=S/2*.82,tilt=.4+.06*Math.sin(t*.35),P=proj(t*.5,tilt,c,c,rad),scan=t*(.5+1.2*(o.scanMul??1)),k=rs(S,.6),dim=o.dimBase??1,pts=[],L=o.latRings??17,D=o.lonDensity??44;
       for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),n=Math.max(1,Math.round(Math.abs(cl)*D));
@@ -439,16 +451,7 @@ footer{background:#08170F;color:#9DB3A6}
         for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),n=Math.max(1,Math.round(Math.abs(cl)*D));
           for(let j=0;j<n;j++){const lon=j/n*2*Math.PI;raw.push({lon,s:[cl*Math.cos(lon),sl,cl*Math.sin(lon)]})}}
         raw.sort((a,b)=>a.s[1]-b.s[1]||a.lon-b.lon);
-        const N=raw.length,tiers=5,R=[.80,.67,.54,.41,.28],yb=[-.70,-.36,-.02,.32,.64],yt=[-.18,.16,.50,.82,1.0];
-        const wt=[.17,.15,.13,.11,.08],trunkW=.07,tot=trunkW+wt.reduce((a,b)=>a+b,0)*1;
-        const bounds=[0,trunkW/tot];let acc=trunkW;for(const w of wt){acc+=w;bounds.push(acc/tot)}
-        raw.forEach((p,i)=>{const q=(i+.5)/N;let k=0;while(k<tiers&&q>bounds[k+1])k++;
-          const f=(q-bounds[k])/(bounds[k+1]-bounds[k]);let X,Y,Z;const c=Math.cos(p.lon),sn=Math.sin(p.lon);
-          if(k===0){const r=.07;Y=-1+f*.32;X=c*r;Z=sn*r}
-          else{const T=k-1,idx=i,scal=1+.1*Math.sin(5*p.lon+T*1.7);
-            if(idx%4===0){const r=R[T]*Math.sqrt(((idx*0.61803)%1))*scal;Y=yb[T]-.02;X=c*r;Z=sn*r}
-            else{const u=Math.sqrt(1-f),r=R[T]*u*scal;Y=yt[T]-(yt[T]-yb[T])*u-(u>.9?.03:0);X=c*r;Z=sn*r}}
-          p.t=[X,Y,Z];p.d=(p.s[1]+1)/2});
+        treeTargets(raw);
         st.pts=raw}
       if(!reduce){if(st.last!=null){const dt=Math.min(.1,Math.max(0,t-st.last));if(st.hold>0)st.hold-=dt;else st.prog=Math.min(1,st.prog+dt/7)}st.last=t}
       const ease=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,g0=Math.min(1,st.prog);
@@ -457,6 +460,15 @@ footer{background:#08170F;color:#9DB3A6}
           x=p.s[0]+(p.t[0]-p.s[0])*e,y=p.s[1]+(p.t[1]-p.s[1])*e,z=p.s[2]+(p.t[2]-p.s[2])*e,hr=Math.hypot(x,z)||1,
           [px,py,pz]=P(x+x/hr*b,y,z+z/hr*b),d=(pz+1)/2,da=angDiff(p.lon+t*.5,scan),g=Math.exp(-(da*da)/.18)*Math.max(0,pz);
         pts.push({x:px,y:py,z:pz,r:((o.rBase??.6)+(o.rDepth??1.7)*d+(o.rBoost??1)*g)*k*(1+.15*ts),white:(o.inkFar??.62)-(o.inkSpan??.54)*d,a:dim+(1-dim)*Math.min(1,g)})}
+      draw(ctx,pts,dark,o.rMin)},
+    tree(ctx,S,t,dark,o){
+      if(!o.pts){const raw=[],L=o.latRings,D=o.lonDensity;
+        for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),n=Math.max(1,Math.round(Math.abs(cl)*D));
+          for(let j=0;j<n;j++){const lon=j/n*2*Math.PI;raw.push({lon,s:[cl*Math.cos(lon),sl,cl*Math.sin(lon)]})}}
+        raw.sort((a,b)=>a.s[1]-b.s[1]||a.lon-b.lon);treeTargets(raw);o.pts=raw}
+      const c=S/2,P=proj(reduce?.6:t*.5,.16,c,c+S*.02,S/2*.9),k=rs(S,.6),pts=[];
+      for(const p of o.pts){const[px,py,pz]=P(p.t[0],p.t[1],p.t[2]),d=(pz+1)/2;
+        pts.push({x:px,y:py,z:pz,r:((o.rBase)+(o.rDepth)*d)*k,white:.5-.5*d+(o.inkShift??0),a:1})}
       draw(ctx,pts,dark,o.rMin)},
     rubik(ctx,S,t,dark,o){const c=S/2,rad=S/2*.82,P=proj(t*.55,.35+.1*Math.sin(t*.9),c,c,rad),k=rs(S,.6),n=o.moveCount??14,mv=rubikMoves(n),st=rubikState(t,n,.42,1.2),pts=[],L=o.latRings??15,D=o.lonDensity??40;
       for(let i=0;i<=L;i++){const lat=-Math.PI/2+i/L*Math.PI,cl=Math.cos(lat),sl=Math.sin(lat),m=Math.max(1,Math.round(Math.abs(cl)*D));
@@ -493,6 +505,7 @@ footer{background:#08170F;color:#9DB3A6}
       rubik:{latRings:15,lonDensity:40,moveCount:14,rBase:.6,rDepth:1.7,rActive:.3,inkFar:.62,inkSpan:.54,rMin:.3},
       wave:{rings:15,lonDensity:40,rBase:.6,rDepth:1.7,rMin:.3},
       orbits:{orbitN:12,ghostN:40,ghostR:.9,ghostA:.5,particles:3,partR:1.2,partRDepth:1.6,rMin:.3},
+      tree:{latRings:14,lonDensity:40,rBase:.8,rDepth:.9,rMin:.75,inkShift:-.25},
       ribbon:{lanes:5,segs:88,ghostN:150,rBase:1.1,rDepth:1.7,rMin:.3,spin:0,bandMul:3.9,wobMul:1}}[mode];
     const o={...base};
     if(big){ if(mode==='globe'||mode==='hero'){o.latRings=26;o.lonDensity=72;o.rBase=.5;o.rDepth=1.4;o.rBoost=1.1} if(mode==='ribbon'){o.segs=140;o.ghostN=260} }
@@ -503,7 +516,7 @@ footer{background:#08170F;color:#9DB3A6}
       if(mode==='ribbon'&&!tiny){o.ghostN=60;o.bandMul=2.6}
       for(const kk of["rBase","rDepth","rActive","ghostR","partR","partRDepth"]) if(o[kk]!=null)o[kk]*=sz;
     }
-    const speed={hero:.9,globe:.9,rubik:1.4,wave:2.2,orbits:1.5,ribbon:1.6}[mode];
+    const speed={tree:.6,hero:.9,globe:.9,rubik:1.4,wave:2.2,orbits:1.5,ribbon:1.6}[mode];
     return{o,speed};
   }
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
